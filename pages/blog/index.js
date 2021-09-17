@@ -1,22 +1,28 @@
-function Blog({ posts }) {
+import Head from "next/head";
+import Image from "next/image";
+import Container from "../../components/Container";
+import RecentPosts from "../../components/RecentPosts";
+import Layout from "../../components/Layout";
+import { getAllPostsForHome } from "../../lib/api";
+
+export default function Home({ allPosts, preview }) {
   return (
-    <ul>
-      {posts.map((post) => (
-        <li>{post.title}</li>
-      ))}
-    </ul>
+    <>
+      <Layout>
+        <Head>
+          <title>CHANGE LATER</title>
+        </Head>
+        <Container>
+          <RecentPosts posts={allPosts} />
+        </Container>
+      </Layout>
+    </>
   );
 }
 
-export async function getStaticProps() {
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
-  const posts = await res.json();
-
+export async function getStaticProps({ preview = null }) {
+  const allPosts = (await getAllPostsForHome(preview)) || [];
   return {
-    props: {
-      posts,
-    },
+    props: { allPosts, preview },
   };
 }
-
-export default Blog;
