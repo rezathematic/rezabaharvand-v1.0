@@ -5,13 +5,16 @@ export default function Avatar({ name, picture }) {
 
   return (
     <div className="flex items-center">
-      <Image
-        src={`${
-          url.startsWith("/") ? process.env.NEXT_PUBLIC_STRAPI_API_URL : ""
-        }${url}`}
-        className="w-12 h-12 rounded-full mr-4 grayscale"
-        alt={name}
-      />
+      <div className="w-12 h-12 relative mr-4">
+        <Image
+          src={`${
+            url.startsWith("/") ? process.env.NEXT_PUBLIC_STRAPI_API_URL : ""
+          }${url}`}
+          className="rounded-full grayscale"
+          layout="fill"
+          alt={name}
+        />
+      </div>
       <div className="text-xl font-bold">{name}</div>
     </div>
   );
