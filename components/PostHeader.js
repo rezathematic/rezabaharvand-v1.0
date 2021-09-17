@@ -9,7 +9,7 @@ export default function PostHeader({ title, date, author }) {
       <div className="mb-8 md:mb-16 sm:mx-0">{/* TODO: Add Cover Image */}</div>
       <div className="max-w-2xl mx-auto">
         <div className="mb-6">
-          <Avatar />
+          <Avatar name={author.name} picture={author.picture} />
         </div>
         <div className="mb-6 text-lg">
           <Date dateString={date} />
