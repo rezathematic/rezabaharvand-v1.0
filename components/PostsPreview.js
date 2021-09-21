@@ -1,6 +1,7 @@
 import Avatar from "./Avatar";
 import Date from "./Date";
 import Link from "next/link";
+import CoverImage from "./CoverImage";
 
 export default function PostsPreview({
   title,
@@ -12,7 +13,9 @@ export default function PostsPreview({
 }) {
   return (
     <div>
-      <div className="mb-5">{/* TODO: Add cover Image */}</div>
+      <div className="mb-5">
+        <CoverImage slug={slug} title={title} url={coverImage.url} />
+      </div>
       <h3 className="text-3xl mb-3 leading-snug">
         <Link href={`/blog/${slug}`}>
           <a className="hover:underline">{title}</a>
