@@ -11,6 +11,7 @@ export default function CoverImage({ title, slug, url }) {
     <Image
       width={2000}
       height={1000}
+      objectFit={"cover"}
       alt={`Image for ${title}`}
       src={imageUrl}
       className={cn("shadow-sm", {
@@ -19,7 +20,7 @@ export default function CoverImage({ title, slug, url }) {
     />
   );
   return (
-    <div className="sm:mx-0">
+    <div className="-mx-5 sm:mx-0">
       <Link href={`/blog/${slug}`}>
         {slug ? <a aria-label={title}>{image}</a> : image}
       </Link>
