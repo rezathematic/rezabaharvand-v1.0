@@ -11,10 +11,10 @@ export default function PostHeader({ title, date, author, coverImage }) {
         <CoverImage title={title} url={coverImage.url} />
       </div>
       <div className="max-w-2xl mx-auto">
-        <div className="mb-6">
+        <div className="mb-3">
           <Avatar name={author.name} picture={author.picture} />
         </div>
-        <div className="mb-6 text-lg">
+        <div className="mb-12 text-sm text-gray-500">
           <Date dateString={date} />
         </div>
       </div>
