@@ -10,7 +10,7 @@ export default function Avatar({ name, picture }) {
           src={`${
             url.startsWith("/") ? process.env.NEXT_PUBLIC_STRAPI_API_URL : ""
           }${url}`}
-          className="rounded-full grayscale"
+          className="rounded-full"
           layout="fill"
           alt={name}
         />

@@ -9,8 +9,8 @@ export default function CoverImage({ title, slug, url }) {
 
   const image = (
     <Image
-      width={2000}
-      height={1000}
+      width={1280}
+      height={720}
       objectFit={"cover"}
       alt={`Image for ${title}`}
       src={imageUrl}
