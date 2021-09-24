@@ -29,7 +29,7 @@ export default function Post({ post, morePosts, preview }) {
                 <title>
                   {post.title} | by Reza Baharvand, rezabaharvand.dev
                 </title>
-                <Meta />
+                {/* <Meta /> */}
               </Head>
               <PostHeader
                 title={post.title}
