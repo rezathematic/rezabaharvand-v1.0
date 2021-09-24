@@ -3,7 +3,7 @@ import Head from "next/head";
 export default function Meta() {
   return (
     <Head>
-      <link
+      {/* <link
         rel="apple-touch-ico"
         sizes="180x180"
         href="/favicon/apple-touch-icon.png"
@@ -25,15 +25,17 @@ export default function Meta() {
         rel="mask-icon"
         href="/favicon/safari-pinned-tab.svg"
         color="#000000"
-      />
-      <link rel="shortcut icon" href="/favicon/favicon.ico" />
-      <meta name="msapplication-TileColor" content="#000000" />
+      /> */}
+      {/* <link rel="shortcut icon" href="/favicon/favicon.ico" /> */}
+      {/* <meta name="msapplication-TileColor" content="#000000" />
       <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
       <meta name="theme-color" content="#000" />
-      <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+      <link rel="alternate" type="application/rss+xml" href="/feed.xml" /> */}
       <meta
         name="description"
-        content={"TODO, Reza Baharvand | Web developer, JavaScript, etc."} // TODO
+        content={
+          "Reza Baharvand | Web developer, Reactjs, Nextjs, Nodejs, MongoDB, PostgreSQL, Expressjs"
+        } // TODO
       />
       {/* <meta
         property="og:image"
