@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 export default function Layout({ children }) {
   return (
     <>
-      <Meta />
+      {/* <Meta /> */}
       <div className="min-h-screen">
         <Navbar />
         <main className="mt-6 md:mt-12">{children}</main>
