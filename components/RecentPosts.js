@@ -3,7 +3,7 @@ import PostsPreview from "./PostsPreview";
 export default function RecentPosts({ posts }) {
   return (
     <section>
-      <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
+      <h2 className="mb-8 text-3xl md:text-4xl font-bold tracking-tighter leading-tight">
         Recent Posts
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-4 lg:gap-8 ">

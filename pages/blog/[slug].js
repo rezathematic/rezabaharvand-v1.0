@@ -9,6 +9,7 @@ import PostHeader from "../../components/PostHeader";
 import PostTitle from "../../components/PostTitle";
 import markdownToHtml from "../../lib/markdownToHtml";
 import RecentPosts from "../../components/RecentPosts";
+import SectionDivider from "../../components/SectionDivider";
 import { getAllPostsWithSlug, getPostAndMorePosts } from "../../lib/api";
 
 export default function Post({ post, morePosts, preview }) {
@@ -38,6 +39,7 @@ export default function Post({ post, morePosts, preview }) {
               />
               <PostBody content={post.content} />
             </article>
+            <SectionDivider />
             {morePosts.length > 0 && <RecentPosts posts={morePosts} />}
           </>
         )}

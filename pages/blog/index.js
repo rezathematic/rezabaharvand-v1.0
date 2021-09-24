@@ -10,7 +10,10 @@ export default function Home({ allPosts, preview }) {
     <>
       <Layout>
         <Head>
-          <title>CHANGE LATER</title>
+          <title>
+            Reza Baharvand | Web developer, Reactjs, Nextjs, Nodejs, MongoDB,
+            PostgreSQL, Expressjs
+          </title>
         </Head>
         <Container>
           <RecentPosts posts={allPosts} />
