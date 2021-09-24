@@ -3,7 +3,7 @@ import ErrorPage from "next/error";
 import Head from "next/head";
 import Container from "../../components/Container";
 import Layout from "../../components/Layout";
-import Meta from "../../components/Meta";
+// import Meta from "../../components/Meta";
 import PostBody from "../../components/PostBody";
 import PostHeader from "../../components/PostHeader";
 import PostTitle from "../../components/PostTitle";
@@ -25,12 +25,6 @@ export default function Post({ post, morePosts, preview }) {
         ) : (
           <>
             <article>
-              <Head>
-                <title>
-                  {post.title} | by Reza Baharvand, rezabaharvand.dev
-                </title>
-                {/* <Meta /> */}
-              </Head>
               <PostHeader
                 title={post.title}
                 coverImage={post.coverImage}
