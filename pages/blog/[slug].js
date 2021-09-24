@@ -19,14 +19,16 @@ export default function Post({ post, morePosts, preview }) {
   }
   return (
     <Layout preview={preview}>
+      {
+        <Head>
+          <title>{post.title} | by Reza Baharvand, rezabaharvand.dev</title>
+        </Head>
+      }
       <Container>
         {router.isFallback ? (
           <PostTitle>Loading...</PostTitle>
         ) : (
           <>
-            <Head>
-              <title>{post.title} | by Reza Baharvand, rezabaharvand.dev</title>
-            </Head>
             <article>
               <PostHeader
                 title={post.title}
