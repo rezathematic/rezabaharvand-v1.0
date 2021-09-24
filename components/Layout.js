@@ -1,4 +1,4 @@
-import Meta from "./Meta";
+// import Meta from "./Meta";
 import Navbar from "./Navbar";
 // TODO: Add the navbar, header, breadcrumbs and footer
 export default function Layout({ children }) {
