@@ -21,7 +21,6 @@ export default function Post({ post, morePosts, preview }) {
     <Layout preview={preview}>
       <Head>
         <title>{post.title} | by Reza Baharvand, rezabaharvand.dev</title>
-        {/* <Meta /> */}
       </Head>
       <Container>
         {router.isFallback ? (
