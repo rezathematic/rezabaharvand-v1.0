@@ -4,15 +4,12 @@ import Head from "next/head";
 import Container from "../../components/Container";
 import Layout from "../../components/Layout";
 // import Meta from "../../components/Meta";
-import PostBody from "../../components/PostBody";
-import PostHeader from "../../components/PostHeader";
 import PostTitle from "../../components/PostTitle";
-import markdownToHtml from "../../lib/markdownToHtml";
-import RecentPosts from "../../components/RecentPosts";
 import SectionDivider from "../../components/SectionDivider";
-import { getAllPostsWithSlug, getPostAndMorePosts } from "../../lib/api";
+import { getAllPostsWithSlug, getAllPostsForCategory } from "../../lib/api";
 
 export default function Post({ post, morePosts, preview }) {
+  console.log(post);
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
@@ -32,16 +29,8 @@ export default function Post({ post, morePosts, preview }) {
               </Head>
               {/* TODO: Add category tag */}
               {/* {post.category ? post.category.name : ""} */}
-              <PostHeader
-                title={post.title}
-                coverImage={post.coverImage}
-                date={post.date}
-                author={post.author}
-              />
-              <PostBody content={post.content} />
             </article>
             <SectionDivider />
-            {morePosts.length > 0 && <RecentPosts posts={morePosts} />}
           </>
         )}
       </Container>
@@ -50,17 +39,17 @@ export default function Post({ post, morePosts, preview }) {
 }
 
 export async function getStaticProps({ params, preview = null }) {
-  const data = await getPostAndMorePosts(params.slug, preview);
-  const content = await markdownToHtml(data?.posts[0]?.content || "");
+  const data = await getAllPostsForCategory(params.category, preview);
+  //   const content = await markdownToHtml(data?.posts?.content || "");
 
   return {
     props: {
       preview,
       post: {
-        ...data?.posts[0],
-        content,
+        ...data?.posts,
+        // content,
       },
-      morePosts: data?.morePosts,
+      //   morePosts: data?.morePosts,
     },
   };
 }
@@ -69,7 +58,7 @@ export async function getStaticPaths() {
   const allPosts = await getAllPostsWithSlug();
 
   return {
-    paths: allPosts?.map((post) => `/blog/${post.slug}`) || [],
+    paths: allPosts?.map((post) => `/category/${post.category.name}`) || [],
     fallback: true,
   };
 }
