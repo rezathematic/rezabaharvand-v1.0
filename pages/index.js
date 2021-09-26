@@ -23,7 +23,7 @@ export default function Home({ allPosts, preview }) {
             <h1 className="text-5xl mt-4 font-bold leading-tight">
               Hey, I&apos;m Reza Baharvand
             </h1>
-            <p className="text-3xl leading-normal md:text-4xl mt-4 font-thin md:leading-relaxed">
+            <p className="text-3xl leading-normal md:text-4xl mt-4 font-extralight md:leading-relaxed">
               I&apos;m a developer, writer, creator. I lead a team of developers
               at SERP Co.
               <br />I work with{" "}
