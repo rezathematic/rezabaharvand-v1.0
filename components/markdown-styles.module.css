@@ -30,12 +30,14 @@
   @apply text-2xl font-semibold mt-8 mb-4 leading-snug;
 }
 
+.markdown a {
+  @apply text-blue-500 hover:text-blue-700 hover:underline focus:ring-2 focus:ring-offset-1 focus:text-blue-700 focus:ring-blue-500;
+}
+
 .markdown code {
   @apply text-sm leading-snug bg-gray-600 text-white p-1 rounded-lg;
 }
-.markdown pre {
-  @apply overflow-x-auto p-6 text-sm leading-snug bg-gray-800 text-white rounded-xl;
-}
+
 .markdown pre code {
-  @apply bg-opacity-0;
+  @apply bg-opacity-0 p-0;
 }
