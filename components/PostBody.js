@@ -1,12 +1,16 @@
 import markdownStyles from "./markdown-styles.module.css";
+import ReactMarkdown from "react-markdown";
+import CodeBlock from "./CodeBlock";
 
 export default function PostBody({ content }) {
   return (
     <div className=" max-w-2xl mx-auto">
-      <div
+      <ReactMarkdown
         className={markdownStyles["markdown"]}
-        dangerouslySetInnerHTML={{ __html: content }}
-      />
+        components={CodeBlock}
+      >
+        {content}
+      </ReactMarkdown>
     </div>
   );
 }
