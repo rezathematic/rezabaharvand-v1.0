@@ -4,7 +4,22 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head />
+        <Head>
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=G-PRRPBK6QV7`}
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-PRRPBK6QV7');
+          `,
+            }}
+          />
+        </Head>
         <body>
           <Main />
           <NextScript />
