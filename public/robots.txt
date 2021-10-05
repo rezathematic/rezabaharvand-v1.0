@@ -1,0 +1,8 @@
+# Block all crawlers for /category
+User-agent: *
+Disallow: /category
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+Sitemap: https://rezabaharvand.dev/sitemap.xml
