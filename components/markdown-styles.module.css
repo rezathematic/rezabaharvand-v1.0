@@ -35,7 +35,7 @@
 }
 
 .markdown code {
-  @apply text-sm leading-snug bg-gray-600 text-white p-1 rounded-lg;
+  @apply text-sm leading-snug bg-gray-600 text-white p-1 rounded-lg whitespace-nowrap;
 }
 
 .markdown pre code {
