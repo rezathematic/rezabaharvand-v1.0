@@ -11,7 +11,7 @@ function generateSiteMap(posts) {
        <priority>1.0</priority>
      </url>
      <url>
-       <loc>https://rezabaharvand.dev/blog</loc>
+       <loc>https://rezabaharvand.dev/blog/</loc>
        <changefreq>daily</changefreq>
        <priority>0.8</priority>
      </url>
@@ -21,7 +21,7 @@ function generateSiteMap(posts) {
        <url>
            <loc>${`https://rezabaharvand.dev/blog/${slug}`}</loc>
            <lastmod>${updated_at}</lastmod>
-           <priority>1.0</priority>
+           <priority>0.9</priority>
        </url>
      `;
        })
