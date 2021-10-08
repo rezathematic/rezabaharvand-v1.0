@@ -28,6 +28,34 @@ export default function Post({ post, morePosts, preview }) {
                 <title>
                   {post.title} | by Reza Baharvand, rezabaharvand.dev
                 </title>
+                <meta
+                  name="title"
+                  content={`${post.title} | by Reza Baharvand, rezabaharvand.dev`}
+                />
+                <meta name="description" content={post.excerpt} />
+                <meta property="og:type" content="website" />
+                <meta
+                  property="og:url"
+                  content={`https://rezabaharvand.dev/blog/${post.slug}`}
+                />
+                <meta
+                  property="og:title"
+                  content={`${post.title} | by Reza Baharvand`}
+                />
+                <meta property="og:description" content={post.excerpt} />
+                <meta property="og:image" content={post.coverImage.url} />
+
+                <meta property="twitter:card" content="summary_large_image" />
+                <meta
+                  property="twitter:url"
+                  content={`https://rezabaharvand.dev/blog/${post.slug}`}
+                />
+                <meta
+                  property="twitter:title"
+                  content={`${post.title} | by Reza Baharvand`}
+                />
+                <meta property="twitter:description" content={post.excerpt} />
+                <meta property="twitter:image" content={post.coverImage.url} />
               </Head>
               {/* TODO: Add category tag */}
               {/* {post.category ? post.category.name : ""} */}
