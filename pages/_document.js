@@ -19,6 +19,14 @@ export default class MyDocument extends Document {
           `,
             }}
           />
+          <meta
+            name="keywords"
+            content="Reza Baharvand, Reza, Baharvand, web developer, Reactjs, Nextjs, Nodejs, MongoDB, PostgreSQL, Expressjs, Javascript, HTML, CSS, Sass"
+          />
+          <meta name="robots" content="index, follow" />
+          <meta name="language" content="English" />
+          <meta name="author" content="Reza Baharvand" />
+          <meta name="revisit-after" content="3 days" />
         </Head>
         <body>
           <Main />
