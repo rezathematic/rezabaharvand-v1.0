@@ -6,7 +6,11 @@ export default function Navbar() {
     <>
       <nav className="bg-white sticky top-0 z-10 shadow-sm">
         <div className="container mx-auto flex justify-between px-4 py-4">
-          <div className="text-lg font-semibold">Reza Baharvand</div>
+          <div className="text-lg font-semibold">
+            <Link href="/">
+              <a>Reza Baharvand</a>
+            </Link>
+          </div>
           <div>
             {HeaderNavLinks.map((link) => (
               <Link key={link.title} href={link.href}>
