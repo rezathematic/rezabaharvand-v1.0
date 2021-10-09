@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Avatar({ name, picture }) {
+export default function Avatar({ picture }) {
   const url = picture.url ?? picture[0].url;
 
   return (
@@ -12,10 +12,9 @@ export default function Avatar({ name, picture }) {
           }${url}`}
           className="rounded-full"
           layout="fill"
-          alt={name}
+          alt={picture[0].alternativeText}
         />
       </div>
-      <div className="text-xl font-bold">{name}</div>
     </div>
   );
 }
