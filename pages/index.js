@@ -57,11 +57,14 @@ export default function Home({ allPosts, preview }) {
             <p className="text-3xl leading-normal md:text-4xl mt-4 font-extralight md:leading-relaxed">
               I&apos;m a developer, writer, creator. I lead a team of developers
               at SERP Co.
-              <br />I work with{" "}
-              <strong>Reactjs, Nextjs, MongoDB, Nodejs, Expressjs</strong>.
-              <br />
-              <strong>Jamstack</strong> is my JAM! and <strong>teaching</strong>{" "}
-              about what I know keeps me rolling.
+              <span className="block">
+                I work with{" "}
+                <strong>Reactjs, Nextjs, MongoDB, Nodejs, Expressjs</strong>.
+              </span>
+              <span className="block">
+                <strong>Jamstack</strong> is my JAM! and{" "}
+                <strong>teaching</strong> about what I know keeps me rolling.
+              </span>
             </p>
           </div>
           <SectionDivider />
