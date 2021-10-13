@@ -28,6 +28,10 @@ export default function Post({ post, morePosts, preview }) {
                 <title>
                   {post.title} | by Reza Baharvand, rezabaharvand.dev
                 </title>
+                <link
+                  rel="canonical"
+                  href={`https://rezabaharvand.dev/blog/${post.slug}`}
+                />
                 <meta
                   name="title"
                   content={`${post.title} | by Reza Baharvand, rezabaharvand.dev`}
@@ -46,16 +50,15 @@ export default function Post({ post, morePosts, preview }) {
                 <meta property="og:image" content={post.coverImage.url} />
 
                 <meta property="twitter:card" content="summary_large_image" />
-                <meta
-                  property="twitter:url"
-                  content={`https://rezabaharvand.dev/blog/${post.slug}`}
-                />
+                <meta property="twitter:site" content="@rezathematic" />
+                <meta property="twitter:creator" content="@rezathematic" />
                 <meta
                   property="twitter:title"
                   content={`${post.title} | by Reza Baharvand`}
                 />
                 <meta property="twitter:description" content={post.excerpt} />
                 <meta property="twitter:image" content={post.coverImage.url} />
+                <meta property="twitter:image:alt" content={post.title} />
               </Head>
               {/* TODO: Add category tag */}
               {/* {post.category ? post.category.name : ""} */}

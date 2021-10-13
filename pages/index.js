@@ -18,6 +18,7 @@ export default function Home({ allPosts, preview }) {
             name="description"
             content="Reza Baharvand | Web developer, Reactjs, Nextjs, Nodejs, MongoDB, PostgreSQL, GraphQL, Expressjs, GSAP, D3js"
           />
+          <link rel="canonical" href="https://rezabaharvand.dev/" />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://rezabaharvand.dev/" />
           <meta
@@ -34,7 +35,8 @@ export default function Home({ allPosts, preview }) {
           />
 
           <meta property="twitter:card" content="summary_large_image" />
-          <meta property="twitter:url" content="https://rezabaharvand.dev/" />
+          <meta property="twitter:site" content="@rezathematic" />
+          <meta property="twitter:creator" content="@rezathematic" />
           <meta
             property="twitter:title"
             content="Reza Baharvand | Full-stack Developer"
